@@ -129,22 +129,32 @@
 		top:20px;
 		margin-left:-400px ;
 	}
-	.showimg img.but_l{
+	.but_c .but_l{
 		display:block;
 		position: absolute;
 		top:45%;
-		left: -40px;
+		left: 0px;
 		cursor:pointer;
 		width:19px;
 		height: 36px;
+		opacity:0;
+		transition: opacity ease-in-out 0.5s;
 	}
-	.showimg img.but_r{
+	.but_c{
+
+	}
+	.gray:hover .but_l,.gray:hover .but_r{
+		opacity:1;
+	}
+	.but_c .but_r{
 		position: absolute;
 		top:45%;
-		right: -40px;
+		right: 0px;
 		cursor:pointer;
 		width:19px;
 		height: 36px;
+		opacity:0;
+		transition: opacity ease-in-out 0.5s;
 	}
 	.clear{
 		clear:both;
@@ -236,7 +246,8 @@
 	<div class="gray">
 		<div class="showimg">
 			<img src="images/aips/ai01.jpg" alt="" class="show_bimg">
-
+		</div>
+		<div class="but_c">
 			<img src="images/dirl.png" alt="" class="but_l">
 			<img src="images/dirr.png" alt="" class="but_r">
 		</div>
@@ -267,7 +278,7 @@
 		$(".showimg").hide();
 	});
 	//點擊右邊
-	$(".showimg img.but_r").click(function(){
+	$(".but_c img.but_r").click(function(){
 		_index++;
 		if(_index>conbox-1){
 			_index=conbox-1;
@@ -275,7 +286,7 @@
 		bImg=$(".conbox>.box>.pic").eq(_index).find("img").attr("bigsrc");//如果eq(0)就是找到序列號0的li
 		$(".showimg img.show_bimg").attr("src",bImg);
 	});
-	$(".showimg img.but_l").click(function(){
+	$(".but_c img.but_l").click(function(){
 		_index--;
 		if(_index<0){_index=0;}
 		bImg=$(".conbox>.box>.pic").eq(_index).find("img").attr("bigsrc");
