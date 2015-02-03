@@ -17,8 +17,13 @@
 		line-height:60px;
 		padding: 20px;
 	}
+	#head .logo{
+		width:240px;
+		height: 60px;
+	}
 	#contitle{
 		width:1024px;
+		height: 45px;
 		margin: 0px auto;
 		background: url(images/footerbg.jpg);
 
@@ -27,8 +32,32 @@
 		list-style-type:none;
 		color:white;
 		font-size:20px;
-		padding: 10px;
 		font-family:微軟正黑體;
+		float:left;
+	}
+	#contitle ul li a.webbg{
+		width:120px;
+		height: 45px;
+		display: block;
+		background: rgba(0, 0, 0, 1) url(images/webdes.png) no-repeat center 10px;
+		-webkit-transition: background-position linear .2s;
+		-moz-transition: background-position linear .2s;
+		transition: background-position linear .2s;
+	}
+	#contitle ul li a.webbg:hover{
+		background: rgba(0, 0, 0, 1) url(images/webdes.png) no-repeat center -62px;
+	}
+	#contitle ul li a.aipsbg{
+		width:120px;
+		height: 45px;
+		display: block;
+		background: #FF5E52 url(images/aips.png) no-repeat center 10px;
+		-webkit-transition: background-position linear .2s;
+		-moz-transition: background-position linear .2s;
+		transition: background-position linear .2s;
+	}
+	#contitle ul li a.aipsbg:hover{
+		background: #FF5E52 url(images/aips.png) no-repeat center -62px;
 	}
 	#con{
 		width:1024px;
@@ -60,25 +89,26 @@
 </head>
 <body>
 	<div id="head">
-		<h1>My WebDesign</h1>
+		<a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
 	</div>
 	<div id="contitle">
 		<ul>
-			<li>靜態網頁</li>
+			<li><a class="webbg" href="index.html"></a></li>
+			<li><a class="aipsbg" href="aips.html"></a></li>
 		</ul>
 	</div>
 	<div id="con">
 		<ul>
 			<li>
-				<a href="http://psycho909.github.io/docchksystemweb/"><img src="images/docchksystemweb.png" alt="">
+				<a href="http://psycho909.github.io/docchksystemweb/"><img src="images/web/docchksystemweb.png" alt="">
 				<p>文件簽核系統靜態網頁</p></a>
 			</li>
 			<li>
-				<a href="http://psycho909.github.io/furnituredemo/"><img src="images/furniturn.jpg" alt="">
+				<a href="http://psycho909.github.io/furnituredemo/"><img src="images/web/furniturn.jpg" alt="">
 				<p>家具網靜態網頁</p></a>
 			</li>
 			<li>
-				<a href="http://psycho909.github.io/petstores/"><img src="images/petstores.jpg" alt="">
+				<a href="http://psycho909.github.io/petstores/"><img src="images/web/petstores.jpg" alt="">
 				<p>寵物精品靜態網頁</p></a>
 			</li>
 		</ul>

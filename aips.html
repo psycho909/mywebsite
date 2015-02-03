@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyWebDesign</title>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#head{
+		margin: 0px auto;
+		width:984px;
+		height: 60px;
+		background: url(images/headbg.jpg);
+		color:white;
+		line-height:60px;
+		padding: 20px;
+	}
+	#head .logo{
+		width:240px;
+		height: 60px;
+	}
+	#contitle{
+		width:1024px;
+		height: 45px;
+		margin: 0px auto;
+		background: url(images/footerbg.jpg);
+
+	}
+	#contitle ul li{
+		list-style-type:none;
+		color:white;
+		font-size:20px;
+		font-family:微軟正黑體;
+		float:left;
+	}
+	#contitle ul li a.webbg{
+		width:120px;
+		height: 45px;
+		display: block;
+		background: #FF5E52 url(images/webdes.png) no-repeat center 10px;
+		-webkit-transition: background-position linear .2s;
+		-moz-transition: background-position linear .2s;
+		transition: background-position linear .2s;
+	}
+	#contitle ul li a.webbg:hover{
+		background: #FF5E52 url(images/webdes.png) no-repeat center -62px;
+	}
+	#contitle ul li a.aipsbg{
+		width:120px;
+		height: 45px;
+		display: block;
+		background: rgba(0, 0, 0, 1) url(images/aips.png) no-repeat center 10px;
+		-webkit-transition: background-position linear .2s;
+		-moz-transition: background-position linear .2s;
+		transition: background-position linear .2s;
+	}
+	#contitle ul li a.aipsbg:hover{
+		background:rgba(0, 0, 0, 1) url(images/aips.png) no-repeat center -62px;
+	}
+	#con{
+		width:1024px;
+		height: auto !important;
+		height:1000px;
+		min-height: 100px;
+		margin: 0px auto;
+		background-color: #f5f5f5;
+	}
+	.conbox{
+		-webkit-column-width:226px;
+		-moz-column-width:226px;
+		-o-column-width:226px;
+		-ms-column-width:226px;
+	}
+	.conbox .box{
+		padding: 10px 0px 0px 10px;
+	}
+	.conbox .box .pic{
+		padding: 8px;
+		border-radius:2px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		width:200px;
+		cursor:pointer;
+	}
+	.conbox .box .pic img{
+		display: inline-block;
+		width:200px;
+		height: auto;
+	}
+	.ggray{
+		width:100%;/*瀏覽器窗口有多寬就多寬*/
+		height: 100%;
+		background:rgba(0, 0, 0, 0.5);
+		position: fixed;/*固定定位*/
+		left:0px;
+		top: 0px;
+		display:none;
+		cursor:pointer;
+	}
+	.gray{
+		position: fixed;/*固定定位*/
+		left:50%;
+		top: 0px;
+		display:none;
+		cursor:pointer;
+		width:1024px;
+		height: 100%;
+		margin-left:-512px ;
+		background:rgba(0, 0, 0, 0.5);
+	}
+	.showimg{
+		/*position:relative;
+		width:300px;
+		height: 300px;
+		border:10px solid black;
+		left:0px;
+		top: 0px;*/
+		display:none;
+	}
+	.showimg img{
+		display:block;
+	}
+	.showimg .show_bimg{
+		display:block;
+		position: absolute;
+		left: 50%;
+		top:20px;
+		margin-left:-400px ;
+	}
+	.showimg img.but_l{
+		display:block;
+		position: absolute;
+		top:45%;
+		left: -40px;
+		cursor:pointer;
+		width:19px;
+		height: 36px;
+	}
+	.showimg img.but_r{
+		position: absolute;
+		top:45%;
+		right: -40px;
+		cursor:pointer;
+		width:19px;
+		height: 36px;
+	}
+	.clear{
+		clear:both;
+	}
+</style>
+</head>
+<body>
+	<div id="head">
+		<a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+	</div>
+	<div id="contitle">
+		<ul>
+			<li><a class="webbg" href="index.html"></a></li>
+			<li><a class="aipsbg" href="aips.html"></a></li>
+		</ul>
+	</div>
+	<div id="con">
+		<div class="conbox">
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/ai01.jpg" alt="" bigsrc="images/aips/ai01.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/ai02.jpg" alt="" bigsrc="images/aips/ai02.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/ps01.jpg" alt="" bigsrc="images/aips/ps01.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/ps02.jpg" alt="" bigsrc="images/aips/ps02.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/ps03.jpg" alt="" bigsrc="images/aips/ps03.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/aisale.jpg" alt="" bigsrc="images/aips/aisale.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/parker.jpg" alt="" bigsrc="images/aips/parker.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/pe.jpg" alt="" bigsrc="images/aips/pe.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/aicity.jpg" alt="" bigsrc="images/aips/aicity.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/aibook.jpg" alt="" bigsrc="images/aips/aibook.png">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/psoz125.jpg" alt="" bigsrc="images/aips/psoz125.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/psother.jpg" alt="" bigsrc="images/aips/psother.jpg">
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/aips/psflower.jpg" alt="" bigsrc="images/aips/psflower.png">
+				</div>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="ggray"></div>
+	<div class="gray">
+		<div class="showimg">
+			<img src="images/aips/ai01.jpg" alt="" class="show_bimg">
+
+			<img src="images/dirl.png" alt="" class="but_l">
+			<img src="images/dirr.png" alt="" class="but_r">
+		</div>
+		<div class="clear"></div>
+	</div>	
+</body>
+<script>
+	var bImg=null;
+	var _index=0;
+	$(".conbox>.box>.pic").click(function(){
+		_index=$(this).index();//獲取序列號
+		//點擊時找到灰色圖層
+		$(".ggray").show();
+		$(".gray").show();
+		$(".showimg").show();
+		bImg=$(this).find("img").attr("bigsrc");//attr(獲取值)
+		$(".showimg img.show_bimg").attr("src",bImg);//attr(將被換取值的屬性,換取得值)
+	});
+	/*$(".gray").click(function(){
+		$(this).hide();
+		$(".showimg").hide();
+	});*/
+	$(".ggray").click(function(){
+		$(".ggray").hide();
+		$(".gray").hide();
+		$(".showimg").hide();
+	});
+	//點擊右邊
+	$(".showimg img.but_r").click(function(){
+		_index++;
+		if(_index>12){
+			_index=12;
+		};
+		bImg=$(".conbox>.box>.pic").eq(_index).find("img").attr("bigsrc");//如果eq(0)就是找到序列號0的li
+		$(".showimg img.show_bimg").attr("src",bImg);
+	});
+	$(".showimg img.but_l").click(function(){
+		_index--;
+		if(_index<0){_index=0;}
+		bImg=$(".conbox>.box>.pic").eq(_index).find("img").attr("bigsrc");
+		$(".showimg img.show_bimg").attr("src",bImg);
+	});
+</script>
+</html>
