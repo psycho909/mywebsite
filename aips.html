@@ -244,6 +244,8 @@
 	</div>	
 </body>
 <script>
+	var conbox=$(".conbox img").length;
+	console.log(conbox);
 	var bImg=null;
 	var _index=0;
 	$(".conbox>.box>.pic").click(function(){
@@ -267,8 +269,8 @@
 	//點擊右邊
 	$(".showimg img.but_r").click(function(){
 		_index++;
-		if(_index>12){
-			_index=12;
+		if(_index>conbox-1){
+			_index=conbox-1;
 		};
 		bImg=$(".conbox>.box>.pic").eq(_index).find("img").attr("bigsrc");//如果eq(0)就是找到序列號0的li
 		$(".showimg img.show_bimg").attr("src",bImg);
