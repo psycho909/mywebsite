@@ -67,17 +67,24 @@
 		margin: 0px auto;
 		background-color: #f5f5f5;
 	}
-	#con ul li{
-		list-style-type:none;
+	#con .column{
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		-webkit-column-count:4;
+		-moz-column-count:4;
+		column-count:4;
+	}
+	#con .column .column-box{
 		width:200px;
+		display: inline-block;
 		text-align:center;
-		float:left;
 		padding: 10px;
 		margin: 10px;
 		background: white;
 		border:1px solid #ddd;
 	}
-	#con ul li a{
+	#con .column .column-box a{
 		color:#bb3e46;
 		text-decoration:none;
 		font-family:微軟正黑體;
@@ -98,48 +105,40 @@
 		</ul>
 	</div>
 	<div id="con">
-		<ul>
-			<li>
+		<div class="column">
+			<div class="column-box">
 				<a href="http://psycho909.github.io/docchksystemweb/" target="_blank"><img src="images/web/docchksystemweb.png" alt="">
 				<p>文件簽核系統靜態網頁</p></a>
-			</li>
-			<li>
+			</div>
+			<div class="column-box">
 				<a href="http://psycho909.github.io/furnituredemo/" target="_blank"><img src="images/web/furniturn.jpg" alt="">
 				<p>家具網靜態網頁</p></a>
-			</li>
-			<li>
+			</div>
+			<div class="column-box">
 				<a href="http://psycho909.github.io/petstores/" target="_blank"><img src="images/web/petstores.jpg" alt="">
 				<p>寵物精品靜態網頁</p></a>
-			</li>
-			<li>
+			</div>
+			<div class="column-box">
 				<a href="http://psycho909.github.io/adoption/" target="_blank"><img src="images/web/adoption.jpg" alt="">
 				<p>認養寵物使用RWD Template</p></a>
-			</li>
-			<li>
-				<a href="http://psycho909.github.io/companywebsite01/" target="_blank"><img src="images/web/company01.jpg" alt="">
-				<p>公司形象網站</p></a>
-			</li>
-			<li>
+			</div>
+			<div class="column-box">
 				<a href="http://psycho909.github.io/mywebsite2/" target="_blank"><img src="images/web/mywebsite2.jpg" alt="">
 				<p>我的作品集網站2</p></a>
-			</li>
-			<li>
+			</div>
+			<div class="column-box">
 				<a href="http://psycho909.github.io/h5animation/" target="_blank"><img src="images/web/h5animation.jpg" alt="">
 				<p>H5單頁滑動網站</p></a>
-			</li>
-			<li>
+			</div>
+			<div class="column-box">
 				<a href="http://psycho909.github.io/travelwebsite/" target="_blank"><img src="images/web/travelwebsite.jpg" alt="">
 				<p>==旅遊網==RWD網站</p></a>
-			</li>
-			<li>
-				<a href="http://wisibm.webca.org/" target="_blank"><img src="images/web/wisxibm.jpg" alt="">
-				<p>WIS x IBM</p></a>
-			</li>
-			<li>
-				<a href="http://fy.hihualang.com/" target="_blank"><img src="images/web/hihualang.jpg" alt="">
-				<p>合作項目1</p></a>
-			</li>
-		</ul>
+			</div>
+			<div class="column-box">
+				<a href="http://psycho909.github.io/parallaxWeb01/" target="_blank"><img src="images/web/parallaxWeb01.jpg" alt="">
+				<p>ParallaxOnePage</p></a>
+			</div>
+		</div>
 		<div class="clear"></div>
 	</div>
 	

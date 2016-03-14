@@ -2,145 +2,480 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>MyWebDesign</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyWebsite</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
-	*{
-		margin: 0px;
-		padding: 0px;
-	}
-	#head{
-		margin: 0px auto;
-		width:984px;
-		height: 60px;
-		background: url(images/headbg.jpg);
-		color:white;
-		line-height:60px;
-		padding: 20px;
-	}
-	#head .logo{
-		width:240px;
-		height: 60px;
-	}
-	#contitle{
-		width:1024px;
-		height: 45px;
-		margin: 0px auto;
-		background: url(images/footerbg.jpg);
-
-	}
-	#contitle ul li{
-		list-style-type:none;
-		color:white;
-		font-size:20px;
-		font-family:微軟正黑體;
-		float:left;
-	}
-	#contitle ul li a.webbg{
-		width:120px;
-		height: 45px;
-		display: block;
-		background: rgba(0, 0, 0, 1) url(images/webdes.png) no-repeat center 10px;
-		-webkit-transition: background-position linear .2s;
-		-moz-transition: background-position linear .2s;
-		transition: background-position linear .2s;
-	}
-	#contitle ul li a.webbg:hover{
-		background: rgba(0, 0, 0, 1) url(images/webdes.png) no-repeat center -62px;
-	}
-	#contitle ul li a.aipsbg{
-		width:120px;
-		height: 45px;
-		display: block;
-		background: #FF5E52 url(images/aips.png) no-repeat center 10px;
-		-webkit-transition: background-position linear .2s;
-		-moz-transition: background-position linear .2s;
-		transition: background-position linear .2s;
-	}
-	#contitle ul li a.aipsbg:hover{
-		background: #FF5E52 url(images/aips.png) no-repeat center -62px;
-	}
-	#con{
-		width:1024px;
-		height: auto !important;
-		height:430px;
-		min-height: 100px;
-		margin: 0px auto;
-		background-color: #f5f5f5;
-	}
-	#con .column{
-		width: 100%;
-		height: auto;
-		margin: 0 auto;
-		-webkit-column-count:4;
-		-moz-column-count:4;
-		column-count:4;
-	}
-	#con .column .column-box{
-		width:200px;
-		display: inline-block;
-		text-align:center;
-		padding: 10px;
-		margin: 10px;
-		background: white;
-		border:1px solid #ddd;
-	}
-	#con .column .column-box a{
-		color:#bb3e46;
-		text-decoration:none;
-		font-family:微軟正黑體;
-	}
-	.clear{
-		clear:both;
-	}
+body{
+	padding-top: 51px;
+	font-family: '微軟正黑體';
+}
+nav.navbar{
+	margin-bottom: 0;
+}
+.navbar-nav{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+#content-box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+#content-box:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/black.png');
+	opacity: 0.3;
+}
+.title-row{
+	margin: 54px 0 36px 0;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 0 3px #000;
+}
+.btn-contact{
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 24px;
+}
+.btn-contact:focus{
+	color: #fff;
+	background-color: transparent;
+}
+.btn-contact:hover{
+	background-color: #fff;
+	text-shadow: none;
+}
+.web-row{
+	margin-bottom: 24px;
+}
+.web-box{
+	padding: 0;
+	border-radius: 0;
+	border: none;
+}
+.web-box .caption h4{
+	margin: 0px 0 6px;
+}
+.web-box .caption .web-badge{
+	margin-bottom: 6px;
+}
+.web-box .caption p{
+	margin-bottom: 6px;
+}
+.web-box .caption .date{
+	padding: 6px 12px;
+}
+.btn-more{
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 24px;
+	background-color: transparent;
+}
+.btn-more:focus{
+	color: #fff;
+	background-color: transparent;
+}
+.btn-more:hover{
+	background-color: #fff;
+	text-shadow: none;
+	color: #000;
+}
+#footer-box{
+	padding: 15px 0;
+}
+.footer-col{
+	font-size: 1.1em;
+}
+.footer-col span{
+	vertical-align: middle;
+}
+.aips-row{
+	display: none;
+}
+.box-item .thumbnail{
+	cursor: pointer;
+}
+.gray{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index:2222;
+	background-color: rgba(0,0,0,.7);
+	display: none;
+}
+.imgshow{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.dirl{
+	position:absolute;
+	top: 50%;
+	left:10%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+.dirr{
+	position:absolute;
+	top: 50%;
+	right:10%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+.close-btn{
+	position:absolute;
+	top: 10%;
+	right:15%;
+	cursor: pointer;
+	color: #000;
+	width: 30px;
+	height: 30px;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 30px;
+	font-size: 1.5em;
+}
 </style>
 </head>
 <body>
-	<div id="head">
-		<a href="index.html"><img src="images/logo.png" alt="" class="logo"></a>
+<div class="gray">
+	<div class="imgshow">
+		<img src="" alt="" class="img-responsive">
 	</div>
-	<div id="contitle">
-		<ul>
-			<li><a class="webbg" href="index.html"></a></li>
-			<li><a class="aipsbg" href="aips.html"></a></li>
-		</ul>
+	<div class="dirl">
+		<img src="images/dirl.png" alt="">
 	</div>
-	<div id="con">
-		<div class="column">
-			<div class="column-box">
-				<a href="http://psycho909.github.io/docchksystemweb/" target="_blank"><img src="images/web/docchksystemweb.png" alt="">
-				<p>文件簽核系統靜態網頁</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/furnituredemo/" target="_blank"><img src="images/web/furniturn.jpg" alt="">
-				<p>家具網靜態網頁</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/petstores/" target="_blank"><img src="images/web/petstores.jpg" alt="">
-				<p>寵物精品靜態網頁</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/adoption/" target="_blank"><img src="images/web/adoption.jpg" alt="">
-				<p>認養寵物使用RWD Template</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/mywebsite2/" target="_blank"><img src="images/web/mywebsite2.jpg" alt="">
-				<p>我的作品集網站2</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/h5animation/" target="_blank"><img src="images/web/h5animation.jpg" alt="">
-				<p>H5單頁滑動網站</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/travelwebsite/" target="_blank"><img src="images/web/travelwebsite.jpg" alt="">
-				<p>==旅遊網==RWD網站</p></a>
-			</div>
-			<div class="column-box">
-				<a href="http://psycho909.github.io/parallaxWeb01/" target="_blank"><img src="images/web/parallaxWeb01.jpg" alt="">
-				<p>ParallaxOnePage</p></a>
+	<div class="dirr">
+		<img src="images/dirr.png" alt="">
+	</div>
+	<div class="close-btn">
+		<span class="glyphicon glyphicon-remove"></span>
+	</div>
+</div>
+<nav class="navbox navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="index.html" class="navbar-brand">
+				MyWebsite
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-menu">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.html">Home</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<main id="content-box">
+	<div class="container">
+		<div class="row title-row">
+			<div class="col-md-12 title-col">
+				<h1 class="text-center title">
+					“WELCOME,THERE ARE MY WEB DESIGN”
+				</h1>
+				<p style="font-size: 2em;">歡迎來看我的作品集</p>
+				<a href="#" class="btn btn-contact">contact me</a>
 			</div>
 		</div>
-		<div class="clear"></div>
+
+		<div class="row web-row">
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/docchksystemweb/" target="_blank">
+						<img src="images/web/docchksystemweb.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>文件簽核系統靜態網頁</h4>
+				        <div class="web-badge">
+				        	<span class="badge">html</span>
+				        	<span class="badge">css</span>
+				        </div>
+				        <p class="pull-right date">2015/07/27</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/docchksystemweb/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/furnituredemo/" target="_blank">
+						<img src="images/web/furnituredemo.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>家具網靜態網頁</h4>
+				        <div class="web-badge">
+				        	<span class="badge">html</span>
+				        	<span class="badge">css</span>
+				        	<span class="badge">jquery</span>
+				        </div>
+				        <p class="pull-right date">2015/09/01</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/furnituredemo/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/petstores/" target="_blank">
+						<img src="images/web/petstores.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>寵物精品靜態網頁</h4>
+				        <div class="web-badge">
+				        	<span class="badge">html</span>
+				        	<span class="badge">css</span>
+				        	<span class="badge">jquery</span>
+				        </div>
+				        <p class="pull-right date">2015/09/15</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/petstores/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/adoption/" target="_blank">
+						<img src="images/web/adoption.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>認養寵物使用</h4>
+				        <div class="web-badge">
+				        	<span class="badge">jquery</span>
+				        	<span class="badge">bootstrap</span>
+				        	<span class="badge">rwd</span>
+				        </div>
+				        <p class="pull-right date">2015/10/03</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/adoption/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/mywebsite2/" target="_blank">
+						<img src="images/web/mywebsite2.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>我的作品集網站2</h4>
+				        <div class="web-badge">
+				        	<span class="badge">html</span>
+				        	<span class="badge">css</span>
+				        	<span class="badge">jquery</span>
+				        </div>
+				        <p class="pull-right date">2015/10/15</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/mywebsite2/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/h5animation/" target="_blank">
+						<img src="images/web/h5animation.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>H5單頁滑動網站</h4>
+				        <div class="web-badge">
+				        	<span class="badge">html</span>
+				        	<span class="badge">css</span>
+				        </div>
+				        <p class="pull-right date">2015/10/15</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/h5animation/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/travelwebsite/" target="_blank">
+						<img src="images/web/travelwebsite.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>==旅遊網==RWD網站</h4>
+				        <div class="web-badge">
+				        	<span class="badge">jquery</span>
+				        	<span class="badge">bootstrap</span>
+				        	<span class="badge">rwd</span>
+				        </div>
+				        <p class="pull-right date">2015/10/15</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/travelwebsite/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 web">
+				<div class="thumbnail web-box">
+					<a href="http://psycho909.github.io/parallaxWeb01/" target="_blank">
+						<img src="images/web/parallaxWeb01.jpg" alt="" class="responsive center-block">
+					</a>
+					<div class="caption">
+						<h4>ParallaxOnePage</h4>
+				        <div class="web-badge">
+				        	<span class="badge">jquery</span>
+				        	<span class="badge">bootstrap</span>
+				        	<span class="badge">rwd</span>
+				        </div>
+				        <p class="pull-right date">2016/03/10</p>
+				        <p>
+				        	<a href="http://psycho909.github.io/parallaxWeb01/" class="btn btn-primary" role="button" target="_blank">Launch</a>
+				        </p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<button type="button" class="btn btn-more center-block">more</button>
+			</div>
+		</div><!-- webrow end-->
+		<div class="row aips-row box">
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/ai01.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/ai02.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/aibook.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/aicity.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/aisale.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/parker.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/pe.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/ps01.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/ps02.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/ps03.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/psflower.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/psother.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+				<div class="thumbnail center-block">
+					<img src="images/aips/psoz125.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+		</div>
 	</div>
-	
+</main>
+<footer id="footer-box">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col-md-12 footer-col text-center">
+				<em><span class="glyphicon glyphicon-earphone"></span>:0972-523-068</em>
+				<p><span class="glyphicon glyphicon-envelope"></span>:psychosocial909@gmail.com</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src="js/masonry.pkgd.min.js"></script>
+<script>
+$(window).load(function(){
+
+})
+$(function(){
+	var i=0;
+	$('.btn-more').on('click',function(){
+		$('.aips-row').toggle(300,function(){
+			$('.box').masonry({
+				itemSelector:'.box-item'
+			})
+		});
+
+	})
+	$('.box-item').on('click',function(){
+		var imgshow=$(this).find('.thumbnail img').attr('src');
+		$('.gray').show();
+		$('.imgshow img').attr('src',imgshow);
+		console.log($(this).index());
+	})
+	$('.close-btn').on('click',function(){
+		$('.gray').hide();
+	})
+	$('.dirr').on('click',function(){
+		i++;
+		if(i>$('.box-item').length-1){
+			i=0;
+		}
+		var s=$('.box-item').eq(i).find('.thumbnail img').attr('src');
+		$('.imgshow img').attr('src',s);
+	})
+	$('.dirl').on('click',function(){
+		i--;
+		if(i<0){
+			i=$('.box-item').length-1;
+		}
+		var s=$('.box-item').eq(i).find('.thumbnail img').attr('src');
+		$('.imgshow img').attr('src',s);
+	})
+})
+</script>
 </body>
 </html>
