@@ -12,7 +12,7 @@
 <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js?20160314"></script>
 <style>
 body{
-	padding-top: 51px;
+	padding-top: 84px;
 	font-family: '微軟正黑體';
 }
 nav.navbar{
@@ -21,6 +21,9 @@ nav.navbar{
 .navbar-nav{
 	margin-top: 0;
 	margin-bottom: 0;
+}
+.navbar-toggle{
+	margin-top: 25px;
 }
 #content-box{
 	position: relative;
@@ -185,6 +188,16 @@ nav.navbar{
 	transform: translate3d(-50%,-50%,0);
 	display: block;
 }
+.navbar-brand{
+	padding: 6px;
+	height: auto;
+}
+.navbar-nav>li>a{
+	line-height: 84px;
+	height: 84px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
 </style>
 </head>
 <body>
@@ -214,7 +227,7 @@ nav.navbar{
 				<span class="icon-bar"></span>
 			</button>
 			<a href="index.html" class="navbar-brand">
-				MyWebsite
+				<img src="images/logo.png" alt="" class="img-responsive">
 			</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-menu">
