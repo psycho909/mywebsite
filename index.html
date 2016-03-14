@@ -9,6 +9,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <style>
 body{
 	padding-top: 51px;
@@ -94,15 +95,6 @@ nav.navbar{
 	text-shadow: none;
 	color: #000;
 }
-#footer-box{
-	padding: 15px 0;
-}
-.footer-col{
-	font-size: 1.1em;
-}
-.footer-col span{
-	vertical-align: middle;
-}
 .aips-row{
 	display: none;
 }
@@ -123,20 +115,20 @@ nav.navbar{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate3d(-50%,-50%,0);
 }
 .dirl{
 	position:absolute;
 	top: 50%;
 	left:10%;
-	transform: translateY(-50%);
+	transform: translate3d(0,-50%,0);
 	cursor: pointer;
 }
 .dirr{
 	position:absolute;
 	top: 50%;
 	right:10%;
-	transform: translateY(-50%);
+	transform: translate3d(0,-50%,0);
 	cursor: pointer;
 }
 .close-btn{
@@ -153,9 +145,52 @@ nav.navbar{
 	line-height: 30px;
 	font-size: 1.5em;
 }
+#footer-box{
+	padding: 15px 0;
+}
+.footer-col{
+	font-size: 1.1em;
+}
+.footer-col .icon-box{
+	text-align: center;
+	line-height: 24px;
+}
+.footer-col .icon-box .icon{
+	width: 1.5em;
+	height: 1.5em;
+	background-color: #F17F42;
+	text-align: center;
+	line-height: 1.5em;
+	border-radius: 50%;
+	color: #fff;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+.footer-col .icon-box em{
+	margin-left: 3px;
+}
+.loading{
+	width: 100%;
+	height: 100vh;
+	background-image: url('images/paisley.png');
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3333;
+}
+.loading img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	display: block;
+}
 </style>
 </head>
 <body>
+<div class="loading">
+	<img src="images/ripple.svg" alt="">
+</div>
 <div class="gray">
 	<div class="imgshow">
 		<img src="" alt="" class="img-responsive">
@@ -194,10 +229,10 @@ nav.navbar{
 		<div class="row title-row">
 			<div class="col-md-12 title-col">
 				<h1 class="text-center title">
-					“WELCOME,THERE ARE MY WEB DESIGN”
+					WELCOME THERE ARE MY WEB DESIGN
 				</h1>
 				<p style="font-size: 2em;">歡迎來看我的作品集</p>
-				<a href="#" class="btn btn-contact">contact me</a>
+				<a href="#" class="btn btn-contact">CONTACT ME</a>
 			</div>
 		</div>
 
@@ -353,7 +388,7 @@ nav.navbar{
 				</div>
 			</div>
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<button type="button" class="btn btn-more center-block">more</button>
+				<button type="button" class="btn btn-more center-block">MORE</button>
 			</div>
 		</div><!-- webrow end-->
 		<div class="row aips-row box">
@@ -429,16 +464,19 @@ nav.navbar{
 	<div class="container">
 		<div class="row footer-row">
 			<div class="col-md-12 footer-col text-center">
-				<em><span class="glyphicon glyphicon-earphone"></span>:0972-523-068</em>
-				<p><span class="glyphicon glyphicon-envelope"></span>:psychosocial909@gmail.com</p>
+				<div class="icon-box">
+					<span class="glyphicon glyphicon-earphone icon"></span>:<em>0972-523-068</em>
+				</div>
+				<div class="icon-box">
+					<span class="glyphicon glyphicon-envelope icon"></span>:<em>psychosocial909@gmail.com</em>
+				</div>
 			</div>
 		</div>
 	</div>
 </footer>
-<script src="js/masonry.pkgd.min.js"></script>
 <script>
 $(window).load(function(){
-
+	$('.loading').fadeOut();
 })
 $(function(){
 	var i=0;
