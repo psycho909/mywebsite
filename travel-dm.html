@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyWebsite</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?20160314"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css?20160314">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js?20160314"></script>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js?20160314"></script>
+<style>
+body{
+	padding-top: 84px;
+	font-family: '微軟正黑體';
+}
+nav.navbar{
+	margin-bottom: 0;
+}
+.navbar-nav{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.navbar-toggle{
+	margin-top: 25px;
+}
+#content-box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/bg.jpg?20160314');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center center;
+}
+#content-box:before{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url('images/black.png?20160314');
+	opacity: 0.3;
+}
+.img-box{
+	width: 100%;
+	margin:20px auto;
+}
+#footer-box{
+	padding: 15px 0;
+}
+.footer-col{
+	font-size: 1.1em;
+}
+.footer-col .icon-box{
+	text-align: center;
+	line-height: 24px;
+}
+.footer-col .icon-box .icon{
+	width: 1.5em;
+	height: 1.5em;
+	background-color: #F17F42;
+	text-align: center;
+	line-height: 1.5em;
+	border-radius: 50%;
+	color: #fff;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+.footer-col .icon-box em{
+	margin-left: 3px;
+}
+.loading{
+	width: 100%;
+	height: 100vh;
+	background-image: url('images/paisley.png?20160314');
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3333;
+}
+.loading img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+	display: block;
+}
+.navbar-brand{
+	padding: 6px;
+	height: auto;
+}
+.navbar-nav>li>a{
+	line-height: 84px;
+	height: 84px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+</style>
+</head>
+<body>
+<div class="loading">
+	<img src="images/ripple.svg" alt="">
+</div>
+<nav class="navbox navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="index.html" class="navbar-brand">
+				<img src="images/logo.png" alt="" class="img-responsive">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-menu">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="index.html">Home</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<main id="content-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="img-box">
+					<img src="images/travel-dm.jpg" alt="" class="img-responsive" style="margin:0 auto;">
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<footer id="footer-box">
+	<div class="container">
+		<div class="row footer-row">
+			<div class="col-md-12 footer-col text-center">
+				<div class="icon-box">
+					<span class="glyphicon glyphicon-earphone icon"></span>:<em>0972-523-068</em>
+				</div>
+				<div class="icon-box">
+					<span class="glyphicon glyphicon-envelope icon"></span>:<em>psychosocial909@gmail.com</em>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script>
+$(window).load(function(){
+	$('.loading').fadeOut();
+})
+$(function(){
+	var i=0;
+	$('.btn-more').on('click',function(){
+		$('.aips-row').toggle(300,function(){
+			$('.box').masonry({
+				itemSelector:'.box-item'
+			})
+		});
+
+	})
+	$('.box-item').on('click',function(){
+		var imgshow=$(this).find('.thumbnail img').attr('src');
+		$('.gray').show();
+		$('.imgshow img').attr('src',imgshow);
+		console.log($(this).index());
+	})
+	$('.close-btn').on('click',function(){
+		$('.gray').hide();
+	})
+	$('.dirr').on('click',function(){
+		i++;
+		if(i>$('.box-item').length-1){
+			i=0;
+		}
+		var s=$('.box-item').eq(i).find('.thumbnail img').attr('src');
+		$('.imgshow img').attr('src',s);
+	})
+	$('.dirl').on('click',function(){
+		i--;
+		if(i<0){
+			i=$('.box-item').length-1;
+		}
+		var s=$('.box-item').eq(i).find('.thumbnail img').attr('src');
+		$('.imgshow img').attr('src',s);
+	})
+})
+</script>
+</body>
+</html>
