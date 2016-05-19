@@ -9,7 +9,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?20160314"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css?20160314">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js?20160314"></script>
-<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js?20160314"></script>
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <style>
 body{
 	padding-top: 84px;
@@ -120,6 +120,9 @@ nav.navbar{
 	left: 50%;
 	transform: translate3d(-50%,-50%,0);
 }
+.imgshow img{
+	margin: 0 auto;
+}
 .dirl{
 	position:absolute;
 	top: 50%;
@@ -197,6 +200,11 @@ nav.navbar{
 	height: 84px;
 	padding-top: 0;
 	padding-bottom: 0;
+}
+@media (max-width: 767px){
+	.imgshow{
+		width: 100%;
+	}
 }
 </style>
 </head>
@@ -443,7 +451,7 @@ nav.navbar{
 			</div>
 		</div><!-- webrow end-->
 		<div class="row aips-row box">
-		<div class="col-md-3 col-sm-4 col-xs-12 box-item">
+			<div class="col-md-3 col-sm-4 col-xs-12 box-item">
 				<div class="thumbnail center-block">
 					<img src="images/aips/nbshop.jpg?20160314" alt="" class="img-responsive">
 				</div>
