@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap 实例 - 滚动监听（Scrollspy）插件事件</title>
+	<link rel="stylesheet" href="http://static.runoob.com/assets/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css">
+	<style>
+h2 {
+  font-family:sans-serif;
+}
+.list {
+  font-family:sans-serif;
+  margin:0;
+  padding:20px 0 0;
+}
+.list > li {
+  display:block;
+  background-color: #eee;
+  padding:10px;
+  box-shadow: inset 0 1px 0 #fff;
+}
+.avatar {
+  max-width: 150px;
+}
+img {
+  max-width: 100%;
+}
+h3 {
+  font-size: 16px;
+  margin:0 0 0.3rem;
+  font-weight: normal;
+  font-weight:bold;
+}
+p {
+  margin:0;
+}
+
+input {
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#fff;
+  text-decoration: none;
+  background-color: #28a8e0;
+  height:30px;
+}
+.sort:hover {
+  text-decoration: none;
+  background-color:#1b8aba;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:13px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.testbox{
+	width: 50%;
+	height: 200px;
+	margin: 60px auto;
+	border:3px solid #900;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <a href="rent01.jpg" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text">
+                    <img src="rent01.jpg" class="img-responsive">
+                </a>
+            </div>
+        </div>
+        <div class="row aips-row box">
+      <div class="col-md-3 col-sm-4 col-xs-12 masonry-box box-item">
+        <a class="center-block">
+          <img src="images/aips/ticket.jpg" alt="" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12 masonry-box box-item">
+        <a class="center-block">
+          <img src="images/aips/ticket.jpg" alt="" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12 masonry-box box-item">
+        <a class="center-block">
+          <img src="images/aips/ticket.jpg" alt="" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12 masonry-box box-item">
+        <a class="center-block">
+          <img src="images/aips/ticket.jpg" alt="" class="img-responsive">
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12 masonry-box box-item">
+        <a class="center-block">
+          <img src="images/aips/ticket.jpg" alt="" class="img-responsive">
+        </a>
+      </div>
+
+    </div>
+    </div>
+<div id="users">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <ul class="list">
+    <li>
+      <h3 class="name">Jonny Stromberg</h3>
+      <p class="born">1986</p>
+    </li>
+    <li>
+      <h3 class="name">Jonas Arnklint</h3>
+      <p class="born">1985</p>
+    </li>
+    <li>
+      <h3 class="name">Jonas Arnklint</h3>
+      <p class="born">1985</p>
+    </li>
+    <li>
+      <h3 class="name">Martina Elm</h3>
+      <p class="born">1986</p>
+    </li>
+    <li>
+      <h3 class="name">Gustaf Lindqvist</h3>
+      <p class="born">1983</p>
+    </li>
+  </ul>
+</div>
+<div class="testbox aa">
+	21312312
+</div>
+<div class="testbox bb">
+	21312312
+</div>
+<div class="testbox cc">
+	21312312
+</div>
+<div class="testbox dd">
+	21312312
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://static.runoob.com/assets/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+<script src="http://listjs.com/no-cdn/list.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript">
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+}); 
+var options = {
+  valueNames: [ 'name', 'born' ]
+};
+$('.box').masonry({
+        itemSelector:'.masonry-box'
+        columnWidth: 293
+      })
+var userList = new List('users', options);
+window.sr = ScrollReveal();
+sr.reveal('.aa');
+sr.reveal('.bb');
+sr.reveal('.cc',{
+	origin:'bottom',
+	opacity:0.5,
+	rotate:{x:180,y:180,z:0},
+	reset:true,
+	viewOffset:{top:-300}
+});
+</script>
+
+</body>
+</html>
