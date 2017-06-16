@@ -1,0 +1,259 @@
+@charset "utf-8";
+/*一般設定**************************************************************************/
+img,p,ul,li,h1,h2,h3,h4,h5,h6,th,b{ margin: 0px; padding: 0px; list-style-type: none; font-weight: bolder; font-size: 100%; border:0px; }
+body { margin:0 auto 0 auto; background-color: #C1DE72; background-position: top center; background-image: url(images/bg.jpg); background-repeat: no-repeat; }
+.wrapper{position:relative;width:1000px;margin:0 auto 0 auto;}
+.top{width:1000px;height:400px;position:relative;background: url(images/top.jpg) no-repeat;}
+.logo { display: block; position: absolute; height: 105px; width: 247px; left:-5px; top:12px; z-index:1; }
+
+#cr { width:100%; position:relative; margin-top: 0px; margin-right: auto; margin-bottom: 0px; margin-left: auto; background-image: url(images/cr_bg.jpg); height: 40px; text-align: center; }
+
+
+/* 活動 */
+#btn_event { width:920px; height: 60px; position: absolute; left: 40px; top: 407px; z-index: 1; background-image: url(images/btn/btn_forum_n.png); background-repeat: no-repeat; }
+#btn_event li{ float:left;width: 184px; height:50px; }
+#btn_event a {width:100%;height:58px;display:block; cursor:pointer;}
+#btn_event a:hover{ background-image: url(images/btn/btn_forum_o.png); background-repeat: no-repeat; }
+#Ms1 a:hover{
+	background-position: 0px 0;
+}
+#Ms2 a:hover{
+	background-position: -184px 0;
+}
+#Ms3 a:hover{
+	background-position: -368px 0;
+}
+#Ms4 a:hover{
+	background-position: -552px 0;
+}
+#Ms5 a:hover{
+	background-position: -736px 0;
+}
+
+
+#box { position: relative; width: 1000px; background-image: url(images/bar.jpg); background-repeat: repeat; background-position: center top; }
+
+#box_c { position: relative; width: 1000px; background-image: url(images/bar.jpg); background-repeat: repeat; background-position: center top; padding-top: 20px; }
+
+#box_b { position: relative; width: 1000px; background-image: url(images/bar.jpg); background-repeat: repeat; background-position: center top; height: 65px; }
+
+#box_d { position: relative; width: 1000px; background-image: url(images/bar.jpg); background-repeat: repeat; background-position: center top; height: 100px; }
+
+.txt_t1 { font-family: "微軟正黑體"; font-size: 13px; line-height: 22px; color: #333; }
+
+.txt_t2 { font-family: "微軟正黑體"; font-size: 11px; line-height: 14px; color: #333; }
+
+.redb {  color: #C00; }
+
+.sb { font-size: 12px; color: #666; }
+
+.list_t1 { font-family: "微軟正黑體"; font-size: 13px; line-height: 20px; color: #333; }
+
+.list_t2 { font-size: 13px; line-height: 20px; color: #FFF; 
+}
+
+
+#userName {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	color: #FFF;
+	left: 320px;
+	top: 590px;
+	width: 212px;
+	height: 27px;
+	line-height: 27px;
+	font-size: 14px;
+	text-align: center;
+	font-weight: normal;
+}
+
+#views { font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #FC0; position: absolute; left: 350px; top: 653px; width: 206px; height: 24px; text-align: center; 
+}
+
+/*top按鈕*/
+#topBtn{ position:absolute; z-index: 2; right:-40px;}
+.topbt_01{ width:40px; height:25px; position: absolute; left: 0px; top: 0px; }
+.topbt_02{ width:40px; height:50px; position: absolute; left: 0px; top: 25px; }
+
+
+.logout {
+	position: absolute;
+	left: 614px;
+	top: 590px;
+	width: 104px;
+	height: 32px;
+	z-index: auto;
+}
+
+#P_1{ width:147px; height:22px; z-index:1; position:absolute; left: 358px; top: 816px; font-family: "微軟正黑體"; font-size: 13px; line-height: 14px; color: #333; font-weight: bold; 
+}
+#P_2{ width:115px; height:22px; z-index:1; position:absolute; left: 445px; top: 817px; font-family: "微軟正黑體"; font-size: 13px; line-height: 14px; color: #333; font-weight: bold;
+}
+#P_3{ width:166px; height:22px; z-index:1; position:absolute; left: 629px; top: 816px; font-family: "微軟正黑體"; font-size: 13px; line-height: 14px; color: #333; font-weight: bold; 
+}
+
+#P_4{ width:127px; height:22px; z-index:1; position:absolute; left: 716px; top: 817px; font-family: "微軟正黑體"; font-size: 13px; line-height: 14px; color: #333; font-weight: bold; }
+
+#P_5{
+	width:78px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 365px;
+	top: 771px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+
+#P_6{ width:123px; height:22px; z-index:1; position:absolute; left: 447px; top: 815px; font-family: "微軟正黑體"; font-size: 12px; line-height: 14px; color: #333; font-weight: bold;
+}
+#P_7{
+	width:99px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 448px;
+	top: 771px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_9{
+	width:82px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 551px;
+	top: 771px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_10{
+	width:135px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 637px;
+	top: 772px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_11{
+	width:78px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 365px;
+	top: 910px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_12{
+	width:100px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 447px;
+	top: 910px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_13{
+	width:84px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 550px;
+	top: 910px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_14{
+	width:135px;
+	height:22px;
+	z-index:1;
+	position:absolute;
+	left: 637px;
+	top: 910px;
+	font-family: "微軟正黑體";
+	font-size: 12px;
+	line-height: 14px;
+	color: #333;
+	font-weight: bold;
+}
+#P_8{ width:140px; height:22px; z-index:1; position:absolute; left: 702px; top: 815px; font-family: "微軟正黑體"; font-size: 12px; line-height: 14px; color: #333; font-weight: bold; 
+}
+
+.btn_01 {
+	position: absolute;
+	left: 440px;
+	top: 1140px;
+	width: 136px;
+	height: 37px;
+	z-index: 1;
+}
+.btn_02 {
+	position: absolute;
+	left: 350px;
+	top: 906px;
+	width: 133px;
+	height: 38px;
+	z-index: 1;
+}
+.btn_03 {
+	position: absolute;
+	left: 500px;
+	top: 906px;
+	width: 133px;
+	height: 39px;
+	z-index: 1;
+}
+.btn_04 { position: absolute; left: 612px; top: -677px; width: 106px; height: 33px; z-index: 1; }
+.btn_05 { position: absolute; left: 679px; top: 117px; width: 189px; height: 51px; z-index: 1; }
+.content{
+	text-align: center;
+	margin-top: 7px;
+}
+.select-team{
+	width: 707px;
+	height: 153px;
+	position: absolute;
+	top:728px;
+	left:146px;
+	font-size: 0;
+	padding-left: 2px;
+}
+.radio-group{
+	width: 176px;
+	text-align: center;
+	margin-top: 16px;
+	display: inline-block;
+}
+.radio-box > label{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: 微軟正黑體;
+}
+label > img{
+	cursor: pointer;
+}

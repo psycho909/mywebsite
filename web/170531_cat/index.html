@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《信喵之野望》</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="header-box">
+			<a href="http://newcat.wasabii.com.tw/index.aspx" target="_blank">
+				<img src="images/logo.png" alt="">
+			</a>
+			<ul class="group">
+				<li>
+					<a href="https://www.facebook.com/nobunyaga" target="_blank"></a>
+				</li>
+				<li>
+					<a href="https://forum.gamer.com.tw/A.php?bsn=19881" target="_blank"></a>
+				</li>
+				<li>
+					<a href="http://www.gamebase.com.tw/forum/67224" target="_blank"></a>
+				</li>
+				<li>
+					<a href="https://member.wasabii.com.tw/WA_memberCenter/joinMember/simpleMember_a.aspx" target="_blank"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="head">
+		<img src="images/head.png" alt="">
+	</div>
+	<div class="menu">
+		<div class="menu-box">
+			<div class="img-box" data-menu="a">
+				<img src="images/menu-a.png" alt="">
+			</div>
+			<div class="img-box" data-menu="b">
+				<img src="images/menu-b.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title">
+			<img src="images/a-1.png" alt="">
+			<div class="text">
+				<p>和好友相互協助，爭奪國家（領地）吧！</p>
+				<p>大量奪取領地，積極爭取更高得分！</p>
+			</div>
+		</div>
+		<div class="section-1">
+			<img src="images/a-2.png" alt="">
+			<img src="images/a-3.png" alt="">
+		</div>
+		<div class="section-1">
+			<img src="images/a-4.png" alt="">
+			<img src="images/a-5.png" alt="">
+		</div>
+		<div class="text">
+			※畫面為開發中的場景。和實際的畫面可能會略有出入。
+		</div>
+	</div>
+	<div class="container b">
+		<div class="title">
+			<img src="images/b-1.png" alt="">
+			<img src="images/b-2.png" alt="" class="card">
+			<div class="text">
+				<p>和好友相互協助，爭奪國家（領地）吧！</p>
+				<p>大量奪取領地，積極爭取更高得分！</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-img">
+			<img src="images/footerbg.jpg" alt="">
+		</div>
+	</div>
+	<div class="top">
+		<a href="javascript:;">▲</a>
+	</div>
+<script>
+	var $top=$('.top');
+	$(function(){
+		$(window).scroll(function(){
+			var top=$(document).scrollTop();
+			if(top >= ($('.container').eq(0).offset().top)){
+				$top.fadeIn();
+			}else{
+				$top.fadeOut();
+			}
+		})
+		$top.on('click',function(){
+			$('html,body').animate({
+				scrollTop:0
+			},600)
+		})
+		$('.img-box').on('click',function(){
+			var index=$(this).index();
+			var top=$('.container').eq(index).offset().top;
+			$('html,body').animate({
+				scrollTop:top
+			},600)
+		})
+	})
+</script>
+</body>

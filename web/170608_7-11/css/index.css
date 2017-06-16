@@ -1,0 +1,107 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 微軟正黑體;
+}
+
+.wrap {
+  width: 100%;
+  min-width: 1100px;
+}
+
+.wrap .head {
+  height: 843px;
+  background-image: url("../images/head.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.wrap .head .target-box {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrap .head .target-box a {
+  width: 180px;
+  height: 80px;
+  position: absolute;
+  top: 16px;
+  left: 61px;
+  display: block;
+}
+
+.wrap .content .title {
+  height: 265px;
+  background-image: url("../images/title.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.wrap .content .section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin: 0 auto;
+}
+
+.wrap .content .section .target-box {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrap .content .section .target-box a {
+  display: block;
+  width: 285px;
+  height: 120px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrap .content .bb {
+  height: 515px;
+  background-image: url("../images/bb.jpg");
+}
+
+.wrap .content .bb a {
+  top: 27px;
+}
+
+.wrap .content .fs2 {
+  height: 620px;
+  background-image: url("../images/fs2.jpg");
+}
+
+.wrap .content .fs2 a {
+  top: 73px;
+}
+
+.wrap .content .gvo {
+  height: 586px;
+  background-image: url("../images/gvo.jpg");
+}
+
+.wrap .content .gvo a {
+  top: 73px;
+}
+
+.wrap .content .eloa {
+  height: 677px;
+  background-image: url("../images/eloa.jpg");
+}
+
+.wrap .content .eloa a {
+  top: 58px;
+}
+
+.wrap .content .notice {
+  height: 439px;
+  background-image: url("../images/notice.jpg");
+}

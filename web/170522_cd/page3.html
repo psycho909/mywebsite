@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《狂魔Online網咖活動》</title>
+	<link rel="stylesheet" href="css/index.css">
+	
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="head">
+		<div class="logo">
+			<a href="http://cd.wasabii.com.tw/index.aspx" target="_blank"></a>
+		</div>
+	</div>
+	<div id="main">
+		<div class="menu-box">
+			<a href="index.html" class=""></a>
+			<a href="page2.html" class=""></a>
+			<a href="page3.html" class="active"></a>
+			<a href="page4.html" class=""></a>
+		</div>
+		<div class="content page3">
+			<div class="content-bg page3">
+				<table class="tables">
+					<thead>
+						<tr>
+							<th>項次</th>
+							<th>店名</th>
+							<th>地址</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="(web,i) in webdata">
+							<td>{{i+1}}</td>
+							<td>{{web.name}}</td>
+							<td>{{web.address}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<img src="images/cr.png" alt="">
+	</div>
+</body>
+<script>
+	var webdata=[
+		{name:'網路堅兵',address:"新北市樹林區保安街一段9號1樓"},
+		{name:'i網棧',address:"新北市板橋區中山路一段50巷22號4樓"},
+		{name:'娛樂高手和平店',address:"桃園市平鎮區和平路2號"},
+		{name:'花田e路文三店',address:"桃園市龜山區文化三路388號1樓"},
+		{name:'V-LIFE網路休閒館',address:"桃園市龜山區萬壽路二段1191-5號"},
+		{name:'遊戲特區-介壽店',address:"桃園市八德區介壽路一段677號"},
+		{name:'加九電力-林口店',address:"桃園市龜山區復興一路493號"},
+		{name:'夢想資訊行',address:"新北市樹林區東華街68號"},
+		{name:'GO GO網路休閒館',address:"基隆市七堵區明德一路210號"},
+		{name:'遊戲特區-延平店',address:"桃園市平鎮區延平路38號"},
+		{name:'花田e路-中原店',address:"桃園市中壢區大仁一街23號"},
+		{name:'娛樂高手-南亞店',address:"桃園市中壢區龍昌路178之2號1樓"},
+		{name:'飆橘-中壢店',address:"桃園市中壢區健行路15號"},
+		{name:'網戰領域-建國店',address:"台北市中山區建國北路3段129號"},
+		{name:'LINE一下',address:"桃園市龜山區明德路332號1樓"},
+		{name:'網路e聯盟',address:"桃園市楊梅區永美路211號"},
+		{name:'新幹線龍安店',address:"桃園市桃園區龍安街96號一樓"},
+		{name:'鑽石網路生活館',address:"桃園市八德區興豐路772號2樓"},
+		{name:'91優質資訊網(欣銳)',address:"台北市大同區民生西路84號2樓"},
+		{name:'橙菓網路',address:"桃園市蘆竹區南崁路60號"},
+
+		{name:'迪士尼網路休閒館',address:"苗栗市中山路19號B1"},
+		{name:'獵網高手-青海店',address:"台中市西屯區何厝東街103號B1"},
+		{name:'E-BOX網路特區-天津店',address:"台中市北屯區天津路4段3號"},
+		{name:'獵網高手-中興店',address:"台中市南區學府路21號"},
+		{name:'e吧網路-彰化店',address:"彰化市大埔路485巷31-1號"},
+		{name:'e吧-民生店',address:"彰化市民生路431號"},
+		{name:'棒棒堂-彰化',address:"彰化市永樂街12號B1"},
+		{name:'冒險王',address:"彰化縣溪湖鎮湖東里興學街65號"},
+		{name:'凱業堡-大雅店',address:"台中市大雅區雅環路2段253號"},
+		{name:'凱業堡-太平店',address:"台中市太平區宜昌路537號"},
+		{name:'車二廠網路',address:"台中市烏日區中山路一段545號"},
+		{name:'e吧-員林店',address:"彰化縣員林市和平街39號2 F"},
+		{name:'網路高手',address:"彰化縣鹿港鎮民族路24號"},
+		{name:'幻想世界',address:"彰化縣社頭鄉清水岩路425號"},
+		{name:'合作網路館-南昌店',address:"彰化縣員林鎮南昌路75號2樓"},
+		{name:'吉耐特-鼎昌店',address:"高雄市三民區鼎山街576號-1"},
+		{name:'吉耐特-新田店',address:"高雄市新興區新田路145號2樓"},
+		{name:'賴著不走網際網路-西門店',address:"台南市中西區西門路一段578號"},
+		{name:'賴著不走-中華店',address:"台南市東區中華東路二段36-2號"},
+		{name:'賴著不走-長榮店',address:"台南市東區長榮路二段53號"},
+
+		{name:'賴著不走-大同店',address:"台南市南區大同路一段24號"},
+		{name:'吉耐特-小港店',address:"高雄市小港區宏平路678號"},
+		{name:'吉耐特-三多店',address:"高雄市前鎮區三多三路139號B1"},
+		{name:'吉耐特-興陽店',address:"高雄市楠梓區楠盛街88號"},
+		{name:'安安網路-民雄店',address:"嘉義縣民雄鄉建國路2段327號"},
+		{name:'奇奇資訊社',address:"嘉義縣新港鄉宮前村登雲路20號"},
+		{name:'台灣網-右昌店',address:"高雄市楠梓區右昌街421號"},
+		{name:'台灣網-裕誠店',address:"高雄市左營區裕誠路439號"},
+		{name:'台灣網-經武店',address:"高雄市鳳山區經武路152號"},
+		{name:'娛學-園瑞隆店',address:"高雄市鳳山區瑞隆東路39號"},
+	]
+	var app=new Vue({
+		el:'#main',
+		data:{
+			webdata:webdata
+		}
+	})
+</script>
+</html>

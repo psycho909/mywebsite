@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,IE=8">
+	<title>《全民打棒球2 Online》</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+	<a href="http://www.wasabii.com.tw/" class="toW" title="wasabii官方網站"></a>
+</div>
+<div class="container">
+	<img src="images/flower.png" alt="" class="flowerbg">
+	<!-- menuBar -->
+	<div class="menuBar">
+		<ul class="mbBox">
+			<li><a href="index.html" title="活動辦法">活動辦法</a></li>
+			<li><a href="https://goo.gl/xvSVYy" title="點卡儲值">點卡儲值</a></li>
+			<li><a href="getgame.html" title="夢幻轉盤">夢幻轉盤</a></li>
+			<li><a href="gamelist.html" title="獎勵一覽" class="active">獎勵一覽</a></li>
+			<li><a href="list.html" title="查詢得獎紀錄">查詢得獎紀錄</a></li>
+		</ul>
+	</div>
+	<!-- main -->
+	<div class="main getList">
+		<table class="listTable">
+			<thead>
+				<tr>
+					<th colspan="2">查詢得獎紀錄</th>
+				</tr>
+			</thead>
+			<tbody class="listBody">
+				<tr>
+					<td>取得時間</td>
+					<td>內容</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- footer -->
+<div class="footer">
+	©Cayenne Entertainment Technology Co., Ltd. All rights reserved.
+</div>
+</body>
+<script>
+function useIE(v){
+	var Sys = {};
+    var ua = navigator.userAgent.toLowerCase();
+    var s;
+    (s = ua.match(/rv:([\d.]+)\) like gecko/)) ? Sys.ie = s[1] :
+    (s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+    (s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+    (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+    (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+    (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+    return Sys.v;
+}
+$(function () {
+	for(var i=0;i<12;i++){
+		$('.listBody').append('<tr><td>1</td><td>2</td></tr>');
+	}
+});
+</script>
+</html>
