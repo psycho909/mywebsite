@@ -1,4 +1,5 @@
 [
+	{"img":"./static/images/design/bb/170623/170623_BB.jpg"},
 	{"img":"./static/images/design/cd/170321/logo-c.jpg"},
 	{"img":"./static/images/design/cd/170503/1.jpg"},
 	{"img":"./static/images/design/cd/170503/2.jpg"},
