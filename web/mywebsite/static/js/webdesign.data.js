@@ -1,6 +1,6 @@
 [
 	{"href":"http://event.wasabii.com.tw/CD/170630_cover/index.html","img":"./static/images/webdesign/170630_cover.jpg","title":"狂魔蓋台頁面","type":"HTML"},
-	{"href":"http://psycho909.github.io/mywebsite/web/170628_BB.jpg/","img":"./static/images/webdesign/170628_BB.jpgr.jpg","title":"全民打棒球改版頁面","type":"HTML"},
+	{"href":"http://psycho909.github.io/mywebsite/web/170628_BB.jpg/","img":"./static/images/webdesign/170628_BB.jpg.jpg","title":"全民打棒球改版頁面","type":"HTML"},
 	{"href":"http://psycho909.github.io/mywebsite/web/travel-dm/","img":"./static/images/webdesign/traveltitle.jpg","title":"Travel-DM","type":"DM"},
 	{"href":"http://psycho909.github.io/mywebsite/web/170614_cd/","img":"./static/images/webdesign/cd01.jpg","title":"女神禮包發送活動頁","type":"HTML"},
 	{"href":"http://psycho909.github.io/mywebsite/web/170608_7-11/","img":"./static/images/webdesign/7-11.jpg","title":"6月統一限時通路活動","type":"HTML"},
