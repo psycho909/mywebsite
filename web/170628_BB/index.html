@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>《全民打棒球2 Online》</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/user.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/shared.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <style>
+        .bg{
+            perspective: 1000px;
+        }
+        .ball{
+            width: 112px;
+            height: 111px;
+            background-image: url(images/ball.png);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            transform:translateZ(300px);
+            z-index: 999;
+            cursor: pointer;
+        }
+        .ball.rotated{
+            animation:rotated .5s linear infinite;
+        }
+        .ball.rotated.active{
+            animation-play-state: paused;
+            transform:rotate(360deg) translateZ(-300px);
+        }
+        @keyframes rotated{
+            0%{
+                transform:rotate(0deg) translateZ(300px);
+            }
+            100%{
+                transform:rotate(360deg) translateZ(300px);
+            }
+        }
+        .glass{
+            width: 100%;
+            min-width: 1100px;
+            height:950px;
+            border:0px solid #000;
+            display: flex;
+            display: -ms-flex;
+            -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
+            position: absolute;
+            perspective: 1000px;
+            transform-style:preserve-3d;
+            opacity: 1;
+            z-index: 8;
+            font-size: 0;
+        }
+        .boxs{
+            width:calc(100% / 18);
+            height:calc(950px / 18);
+            display: inline-block;
+
+            position: relative;
+            transition:box-shadow .5s;
+        }
+        .boxs.active{
+            box-shadow: 1px 1px 14px rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper" class="bg">
+        <div class="ball rotated"></div>
+        <div class="glass"></div>
+        <div id="indextop">
+            <div id="MENU">
+                <div id="n">
+                    <a class="event01" href="javascript:;"></a>
+                    <a class="event02" href="javascript:;"></a>
+                    <a class="event03" href="http://bb.wasabii.com.tw/notice/NoticeContent.aspx?K= 34566" target="_blank"></a>
+                    <a class="event04" href="javascript:;"></a>
+                </div>
+            </div>
+            <div class="role-box">
+                <div class="roles red"></div>
+                <div class="roles black"></div>
+                <div class="roles brown"></div>
+                <div class="roles green"></div>
+                <div class="roles blue"></div>
+
+                <div class="title-box">
+                    <div class="date"></div>
+                    <div class="b-title-box">
+                        <div class="t-ball-light t-ball-light-a"></div>
+                        <div class="t-ball-light t-ball-light-b"></div>
+                        <div class="t-ball"></div>
+                        <div class="t-1"></div>
+                        <div class="t-2"></div>
+                        <div class="t-0"></div>
+                        <div class="t-4"></div>
+                    </div>
+                    <div class="s-title-box">
+                        <div class="s-title-light-a"></div>
+                        <div class="s-title-light-b"></div>
+                        <div class="s-title"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="BOX">
+                <!-- P1-->
+                <div id="p1bg" class="pp">
+                    <a href="#" class="close"></a>
+                    <div class="box1">
+                        <div class="title"><img src="images/tt1.png" /></div>
+
+                        <div class="abgne_tab">
+                            <ul class="abgne_tab_btn2">
+                                <li class="tabs" data-index="ev1"><a>CPBL單年度加成調整</a></li>
+                                <li class="tabs" data-index="ev2"><a>2007' CPBL選手卡再評價</a></li>
+                                <li class="tabs" data-index="ev3"><a>新增總教練訓練欄位</a></li>
+                                <li class="tabs" data-index="ev4"><a>新增Team Color</a></li>
+                                <li class="tabs" data-index="ev5"><a>LIVE實況卡第2次成績更新</a></li>
+                                <li class="tabs" data-index="ev6"><a>改善作戰鍵</a></li>
+                                <li class="tabs" data-index="ev7"><a>取消登入驗證碼&調整俱樂部經驗獲取方式</a></li>
+                                <li class="tabs" data-index="ev8"><a>紫卡點數5倍活動</a></li>
+                                <li class="tabs" data-index="ev9"><a>老兵傳授活動</a></li>
+                                <li class="tabs" data-index="ev10"><a>變更寶石商店販售物品</a></li>
+                                <li class="tabs" data-index="ev11"><a>輪盤活動</a></li>
+                                <li class="tabs" data-index="ev12"><a>全壘打大賽第58季及黃金球獎勵更換</a></li>
+                            </ul>
+
+                            <!-- P1內容開始-->
+                            <div>
+                                <div class="tab_content">
+                                    <img src="images/ev1.jpg">
+                                    <a class="btn btn1" href="https://docs.google.com/spreadsheets/d/1LI8fg8Tw54ZQQdvpuSW-MQ12OsEN8ltdbSXz_LigWck/edit?usp=sharing" target="_blank">詳細查看單年度加成調整</a>
+                                </div>
+                                <div class="tab_content">
+                                    <img src="images/ev2.jpg">
+                                    <a class="btn btn2-1" href="https://docs.google.com/spreadsheets/d/1LI8fg8Tw54ZQQdvpuSW-MQ12OsEN8ltdbSXz_LigWck/edit?usp=sharing" target="_blank">2007重評及新增打者</a>
+                                    <a class="btn btn2-2" href="https://docs.google.com/spreadsheets/d/1LI8fg8Tw54ZQQdvpuSW-MQ12OsEN8ltdbSXz_LigWck/edit?usp=sharing" target="_blank">2007重評及新增投手</a>
+                                </div>
+                                <div class="tab_content"><img src="images/ev3.jpg"></div>
+                                <div class="tab_content"><img src="images/ev4.jpg">
+                                    <a class="btn btn4" href="https://docs.google.com/spreadsheets/d/1LI8fg8Tw54ZQQdvpuSW-MQ12OsEN8ltdbSXz_LigWck/edit?usp=sharing" target="_blank">詳細查看新TC加成</a>
+                                </div>
+                                <div class="tab_content"><img src="images/ev5.jpg">
+                                    <a class="btn btn5" href="https://docs.google.com/spreadsheets/d/1LI8fg8Tw54ZQQdvpuSW-MQ12OsEN8ltdbSXz_LigWck/edit?usp=sharing" target="_blank">詳細查看LIVE實況卡</a>
+                                </div>
+                                <div class="tab_content"><img src="images/ev6.jpg"></div>
+                                <div class="tab_content"><img src="images/ev7.jpg"></div>
+                                <div class="tab_content"><img src="images/ev8.jpg"></div>
+                                <div class="tab_content"><img src="images/ev9.jpg"></div>
+                                <div class="tab_content"><img src="images/ev10.jpg"></div>
+                                <div class="tab_content"><img src="images/ev11.jpg"></div>
+                                <div class="tab_content"><img src="images/ev12.jpg"></div>
+                            </div>
+                            <!-- P1內容結束-->
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- P2-->
+                <div id="p2bg" class="pp">
+                    <a href="#" class="close"></a>
+                    <div class="box3">
+                        <div class="title"><img src="images/tt3.png" /></div>
+                    </div>
+                </div>
+
+                <!-- P3-->
+                <div id="p3bg" class="pp"></div>
+                <!-- P2內容結束-->
+
+                <!-- P4-->
+                <div id="p4bg" class="pp">
+                    <a href="#" class="close"></a>
+                    <div class="box4">
+                        <div class="title"><img src="images/tt4.png" /></div>
+                        <div class="p3mox">
+                            <div class="abgne_tab1">
+                                <ul class="abgne_tab_btn1">
+                                    <li><a href="http://bb.wasabii.com.tw/notice/NoticeContent.aspx?K=34567" target="_blank">7月首儲送</a></li>
+                                    <li><a href="http://bb.wasabii.com.tw/notice/NoticeContent.aspx?K=34568" target="_blank">7月首購送</a></li>
+                                    <li><a href=" http://bb.wasabii.com.tw/notice/NoticeContent.aspx?K=34313" target="_blank">全國第9屆俱樂部大賽</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab_container3">
+                            <a href="http://event.wasabii.com.tw/bb/170517_event/index.html" target="_blank" ><img src="images/719x192_02.jpg"/></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- box-->
+            </div>
+            <a class="logo2" href="http://bb.wasabii.com.tw/index.aspx" title="前往官網" target="_blank"></a>
+            <div id="topmenu_bg">
+                <div class="topmenu">
+                    <a class="mainlink" href="https://www.facebook.com/MA9MA9" target="_blank">官方粉絲團</a>│
+                    <a class="mainlink" href="http://forum.gamer.com.tw/A.php?bsn=10964" target="_blank">巴哈姆特</a>│
+                    <a class="mainlink" href="https://member.wasabii.com.tw/WA_memberCenter/open/open.aspx?srv=2" target="_blank">加入會員</a>│
+                    <a class="mainlink" href="http://bb.wasabii.com.tw/BB_Download/client.shtml" target="_blank">遊戲下載</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="cr"></div>
+</body>
+<script src="js/user.js"></script>
+<script>
+var boxss=0,j=0;
+var num=18;
+var time=1.7;
+var ballTime;
+var balltimer=1;
+var exPo=Expo.easeOut;
+$(function () {
+    var tl = new TimelineMax();
+    var tl2 = new TimelineMax();
+
+
+
+    for(var i=0;i<(num*num);i++){
+        $('.glass').append('<div class="boxs"></div>');
+    }
+    var w=$('.glass').width()/num;
+    var h=$('.glass').height()/num;
+
+    for(var i=0;i<$(".boxs").length;i++){
+        if(i>(num-1) && i%num==0){
+            boxss++;
+            j=0;
+        }
+        $('.boxs').eq(i).css({
+            'background-position':-w*j+'px '+boxss*-h+'px'
+        })
+        j++;
+    }
+    tl2.pause();
+    tl2.set('.red',{opacity:0})
+        .set('.black',{opacity:0})
+        .set('.brown',{opacity:0})
+        .set('.green',{opacity:0})
+        .set('.blue',{opacity:0})
+
+        .set('.date',{opacity:0})
+        .set('.t-ball',{opacity:0})
+        .set('.t-ball-light',{opacity:0})
+        .set('.t-1',{opacity:0})
+        .set('.t-2',{opacity:0})
+        .set('.t-0',{opacity:0})
+        .set('.t-4',{opacity:0})
+
+        .set('.s-title-box',{opacity:0})
+        .set('.s-title-light-a',{opacity:0})
+        .set('.s-title-light-b',{opacity:0});
+    tl2.fromTo('.red',.8,{y:'20%',z:'-1000px',opacity:0},{y:'0%,',z:'0px',opacity:1},time+3.1)
+    tl2.fromTo('.black',.8,{x:'-100%',y:'10%',z:'-1000px',opacity:0},{x:'0%',y:'0%',z:'0px',opacity:1,ease: exPo},time+2.5)
+    tl2.fromTo('.brown',.8,{x:'100%',y:'10%',z:'-1000px',opacity:0},{x:'0%',y:'0%',z:'0px',opacity:1,ease: exPo},time+2)
+    tl2.fromTo('.blue',.8,{x:'-100%',y:'10%',z:'-1000px',opacity:0},{x:'0%',y:'0%',z:'0px',opacity:1,ease: exPo},time+1.5)
+    tl2.fromTo('.green',.8,{x:'100%',y:'10%',z:'-1000px',opacity:0},{x:'0%',y:'0%',z:'0px',opacity:1,ease: exPo},time+1)
+
+    tl2.fromTo('.date',.5,{z:'-1000px',opacity:0},{z:'0px',opacity:1},time+4)
+    tl2.fromTo('.t-ball',.5,{z:'-1000px',opacity:0},{z:'0px',opacity:1},time+4.6)
+    tl2.fromTo('.t-ball-light',.5,{opacity:0},{opacity:1},time+5);
+    tl2.fromTo('.t-1',.6,{x:'-50%',opacity:0},{x:'-169%',opacity:1},time+5.2)
+    tl2.fromTo('.t-2',.6,{x:'-50%',opacity:0},{x:'77%',opacity:1},time+5.2)
+    tl2.fromTo('.t-0',.8,{x:'-50%',opacity:0},{x:'-279%',opacity:1},time+5.6)
+    tl2.fromTo('.t-4',.8,{x:'-50%',opacity:0},{x:'159%',opacity:1},time+5.6)
+
+    tl2.fromTo('.s-title-box',1,{opacity:0},{opacity:1},time+6)
+    tl2.fromTo('.s-title-light-a',.4,{x:'-50%',opacity:0},{x:'0%',opacity:1,ease: exPo},time+6.5)
+    tl2.fromTo('.s-title-light-b',.4,{x:'50%',opacity:0},{x:'0%',opacity:1,ease: exPo},time+6.5)
+
+
+    $('.ball').on('click',function(){
+        $('.boxs').addClass('active');
+        $('.ball').removeClass('rotated');
+        tl2.play();
+        tl.to('.ball',.3,{
+            z:-300,
+            rotation:360,
+            opacity:0,
+            onComplete:function(){
+                $('.boxs').each(function(i,v){
+                    var newTop=Math.floor(Math.random()*500)*((i%2)?Math.random():-Math.random());
+                    var newLeft=Math.floor(Math.random()*500)*((i%2)?Math.random():-Math.random());
+                    var newScale=Math.round(Math.random()*2);
+                    var newRotation=Math.floor(Math.random()*180)*((i%2)?Math.random():-Math.random());
+                    var newRotationX=Math.floor(Math.random()*180)*((i%2)?Math.random():-Math.random());
+                    var newRotationY=Math.floor(Math.random()*180)*((i%2)?Math.random():-Math.random());
+                    var newZ=Math.floor(Math.random()*800);
+
+                    tl.to($(this),2.5,{
+                        x:newLeft,
+                        y:newTop,
+                        z:newZ,
+                        rotationY:newRotationX,
+                        rotationX:newRotationY,
+                        rotation:newRotation,
+                        opacity:0,
+                        display:'none',
+                        transformOrigin:'center center'
+                    },0)
+                })
+                setTimeout(function(){
+                    $('.glass').remove();
+                    $('.ball').remove();
+                    console.log('ready')
+                },2600)
+            }
+        })
+    })
+});
+</script>
+</html>
