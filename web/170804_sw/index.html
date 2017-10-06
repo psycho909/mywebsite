@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>《靈魂行者》事前登錄活動</title>
+	<meta name="description" content="《靈魂行者》事前登錄活動" />
+	<link rel="stylesheet" href="css/index.css">
+	<link href="images/page1/page1.jpg" rel="image_src" type="image/jpeg">
+</head>
+<body>
+	<div class="section page1" data-title="page1">
+		<div class="page-box">
+			<a href="javascript:;" class="logo"></a>
+			<div class="social-box">
+				<a href="https://www.facebook.com/SoulWorkerTW" target="_blank" data-social="FB"></a>
+				<a href="https://acg.gamer.com.tw/acgDetail.php?s=53625" target="_blank" data-social="BAHA"></a>
+				<a href="https://www.youtube.com/playlist?list=PLR-1cd-rUr9tlcdnVbNg_cn9Q-tKJEeR6" target="_blank" data-social="YOUTUBE"></a>
+			</div>
+			<div class="ready"></div>
+			<div class="role"></div>
+		</div>
+	</div>
+
+	<div class="section page2" data-title="page2">
+		<div class="page-box">
+			<div class="title"></div>
+			<div class="role-a"></div>
+			<div class="role-b"></div>
+			<div class="content-box">
+				<!-- 臉書按讚塊 -->
+				<div class="fb-like">
+					<div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.10";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+						<div class="fb-page" data-href="https://www.facebook.com/SoulWorkerTW" data-tabs="timeline" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/SoulWorkerTW" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SoulWorkerTW">SoulWorker 靈魂行者</a></blockquote></div>
+				</div>
+				<!-- 選擇時裝塊 -->
+				<div class="cloth-box">
+					<div class="cloth-select">
+						<input type="radio" name="cloth" value="a" id="cloth-a">
+						<label for="cloth-a"></label>
+					</div>
+					<div class="cloth-select">
+						<input type="radio" name="cloth" value="b" id="cloth-b">
+						<label for="cloth-b"></label>
+					</div>
+					<div class="cloth-select">
+						<input type="radio" name="cloth" value="c" id="cloth-c">
+						<label for="cloth-c"></label>
+					</div>
+				</div>
+				<!-- 輸入電話框 -->
+				<div class="phone-box">
+					<select name="" id="select-phone">
+						<option value="" disabled selected>請選擇</option>
+						<option value="+886">台灣</option>
+						<option value="+852">香港</option>
+						<option value="+853">澳門</option>
+					</select>
+					<input id="phone" type="text" name="" value="" placeholder="請輸入手機號碼">
+				</div>
+				<!-- 立即登陸按鈕 -->
+				<a href="javascript:;" class="submit-btn"></a>
+
+				<div class="info">我同意靈魂行者<a href="https://member.wasabii.com.tw/WA_liscence/privacy_member.html" target="_blank" class="privacy-member">隱私權政策</a>，妥善履行您的個人資料蒐集與運用</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section page3" data-title="page3">
+		<div class="page-box">
+			<div class="title"></div>
+			<div class="role-a"></div>
+			<div class="role-b"></div>
+			<div class="content-box">
+				<!-- 登入會員按鈕 -->
+				<a href="https://member.wasabii.com.tw/Login.aspx" class="login-btn" target="_blank"></a>
+				<!-- 登入會員後顯示網址 -->
+				<input type="text" id="get-url" value="請先登入會員">
+			</div>
+		</div>
+	</div>
+
+	<div class="section page4" data-title="page4">
+		<div class="page-box">
+			<div class="title"></div>
+			<!-- 目前預約人數 -->
+			<span class="count reserve-count">66666</span>
+			<!-- 目前按讚人數 -->
+			<span class="count like-count">66666</span>
+			<!-- 事前登錄 -->
+			<div class="reserve-bounce-box">
+				<!-- 增加 active 顯示達成圖案-->
+				<div class="bounce reserve-1 active" data-bounce="1000"></div>
+				<div class="bounce reserve-3 active" data-bounce="3000"></div>
+				<div class="bounce reserve-5 active" data-bounce="5000"></div>
+			</div>
+			<!-- 臉書粉絲 -->
+			<div class="fb-bounce-box">
+				<!-- 增加 active 顯示達成圖案-->
+				<div class="bounce fb-1 active" data-bounce="1000"></div>
+				<div class="bounce fb-3 active" data-bounce="3000"></div>
+				<div class="bounce fb-5" data-bounce="5000"></div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-box">
+			<img src="images/cr.png" alt="">
+		</div>
+	</div>
+	<div class="left-menu">
+		<a href="javascript:;" class="scroll" data-menuname="事前登錄..."></a>
+		<a href="javascript:;" class="scroll" data-menuname="分享給好友..."></a>
+		<a href="javascript:;" class="scroll" data-menuname="人氣..."></a>
+		<a href="javascript:;" target="_blank" class="scroll" data-menuname="玩家搶先體驗會報名"></a>
+	</div>
+	<div class="top"></div>
+	<script src="js/lib/require.js" data-main="js/main"></script>
+
+</body>
+</html>

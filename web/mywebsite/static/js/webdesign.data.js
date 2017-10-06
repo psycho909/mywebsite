@@ -1,4 +1,8 @@
 [
+	{"href":"http://psycho909.github.io/mywebsite/web/171011_bb/index.html","img":"./static/images/webdesign/2017/step/171011_bb/1024x768.jpg","title":"全民打棒球","type":"HTML"},
+	{"href":"http://psycho909.github.io/mywebsite/web/170929_sw/index.html","img":"./static/images/webdesign/2017/step/170929_sw/ingame.jpg","title":"靈魂行者","type":"HTML"},
+	{"href":"http://psycho909.github.io/mywebsite/web/170912_cd/index.html","img":"./static/images/webdesign/2017/step/170912_cd/1024x768.jpg","title":"狂魔蓋台","type":"HTML,Vue"},
+	{"href":"http://psycho909.github.io/mywebsite/web/170804_sw/index.html","img":"./static/images/webdesign/2017/aug/170804_sw/940x386.jpg","title":"靈魂行者","type":"HTML"},
 	{"href":"http://event.wasabii.com.tw/CD/170630_cover/index.html","img":"./static/images/webdesign/170630_cover.jpg","title":"狂魔蓋台頁面","type":"HTML"},
 	{"href":"http://psycho909.github.io/mywebsite/web/170628_BB/","img":"./static/images/webdesign/170628_BB.jpg","title":"全民打棒球改版頁面","type":"HTML"},
 	{"href":"http://psycho909.github.io/mywebsite/web/travel-dm/","img":"./static/images/webdesign/traveltitle.jpg","title":"Travel-DM","type":"DM"},

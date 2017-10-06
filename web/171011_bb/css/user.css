@@ -1,0 +1,99 @@
+body{
+	min-width: 1200px;
+}
+#indextop{
+	width: 1200px;
+}
+.bg{
+	background: url(../images/bg.jpg) center top no-repeat #fff
+}
+.logo2{
+	left: 0%;
+}
+#topmenu_bg{
+	background-image: none;
+	right: 100px;
+}
+#wrapper{
+    position: relative;
+	overflow:hidden;
+}
+#BOX{
+	width: 1200px;
+    display: none;
+    z-index: 1;
+}
+#BOX .pp{
+	left: 50%;
+	transform: translateX(-50%);
+}
+#BOX.active,
+#indextop.active{
+    display: block;
+    z-index: 9999;
+}
+.curtains.active{
+	z-index: 0;
+}
+#MENU{
+    width: 1200px;
+    font-size: 0;
+}
+#MENU #n{
+	width: 1000px;
+	margin: 0 auto;
+}
+.topmenu{
+	left: 9px;
+	color:#000;
+	z-index: 4;
+}
+.topmenu a.mainlink{
+	color:#000;
+}
+.topmenu a:hover{
+	color:#000;
+}
+.btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: gold;
+    background: linear-gradient(to top,#b41147 0%,#4e011a 100%);
+    transition:all .3s;
+    border:1px solid #4E011D;
+    color:#fff;
+}
+/* ================= */
+.move-box{
+	width: 1200px;
+	height: 840px;
+	margin: 0 auto;
+	position: relative;
+}
+.move-box .move-ruby{
+	width: 1170px;
+	height: 432px;
+	background-image: url('../images/move-ruby.png');
+	position: absolute;
+	top: 244px;
+	left: 15px;
+}
+.move-box .move-coin{
+	width: 1177px;
+	height: 382px;
+	background-image: url('../images/move-coin.png');
+	position: absolute;
+	top: 139px;
+	left: 15px;
+}
+.move-box .move-role{
+	width: 1150px;
+	height: 523px;
+	background-image: url('../images/move-role.png');
+	position: absolute;
+	top: 116px;
+	left:22px;
+}

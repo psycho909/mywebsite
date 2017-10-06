@@ -1,0 +1,62 @@
+<div class="pages page3" data-page="3">
+	<div class="close-btn" @click="closeBtn"></div>
+	<div class="title">
+		<img src="images/page3-title.png" alt="">
+	</div>
+	<ul class="labels" data-num="3">
+		<li v-for="v in page3labels" class="label-btn" :class="[v.active?'active':'']" @click="labelToggle">{{v.label}}</li>
+	</ul>
+
+	<div class="pages-content page3-a active" data-num="a">
+		<img src="images/page3-a-ev.png" alt="">
+		<table class="tables" style="margin:18px 60px;width:400px">
+			<thead>
+				<tr>
+					<th v-for="v in page3.page3_a[0].title">{{v.title}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="v in page3.page3_a[0].bounce">
+					<td>{{v.st}}</td>
+					<td>{{v.bouncename}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="notices-box">
+			<p>注意事項</p>
+			<ol>
+				<li class="notice-list" v-for=" v in page3.page3_a[0].notices">{{v.notice}}</li>
+			</ol>
+		</div>
+	</div>
+	<div class="pages-content page3-b" data-num="b">
+		<img src="images/page3-b-ev.png" alt="">
+
+		<div class="notices-box">
+			<p>注意事項</p>
+			<ol>
+				<li class="notice-list" v-for=" v in page3.page3_b[0].notices">{{v.notice}}</li>
+			</ol>
+		</div>
+	</div>
+	<div class="pages-content page3-c" data-num="c">
+		<img src="images/page3-c-ev.png" alt="">
+
+		<div class="notices-box">
+			<p>注意事項</p>
+			<ol>
+				<li class="notice-list" v-for=" v in page3.page3_c[0].notices">{{v.notice}}</li>
+			</ol>
+		</div>
+	</div>
+	<div class="pages-content page3-d" data-num="d">
+		<img src="images/page3-d-ev.png" alt="">
+
+		<div class="notices-box">
+			<p>注意事項</p>
+			<ol>
+				<li class="notice-list" v-for=" v in page3.page3_d[0].notices">{{v.notice}}</li>
+			</ol>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,51 @@
+<div class="pages page2" data-page="2">
+	<div class="close-btn" @click="closeBtn"></div>
+	<div class="title">
+		<img src="images/page2-title.png" alt="">
+	</div>
+	<ul class="labels">
+		<li v-for="v in page2labels" class="label-btn" :class="[v.active?'active':'']" @click="labelToggle">{{v.label}}</li>
+	</ul>
+	<div class="pages-content page2-a active" data-num="a">
+		<img src="images/page2-a-ev.png" alt="">
+		<div class="page-text">
+			<div>這次的改版中，玩家終於可以為了自身的信仰而挺身對抗，不管是崇尚天衍之靈的正義或是信奉噬滅之靈的信條，都可以透過這個系統加入想要的陣營！讓我們一起來看看吧</div>
+			<h2>陣營加入</h2>
+			<div>玩家會透過主線任務選擇陣營，當軍團長創建軍團時也會選擇陣營。陣營分為天衍陣營與噬滅陣營。若玩家未選擇陣營，則無法加入任何軍團。老玩家若無軍團也可以自行選擇陣營，若是有軍團的玩家，軍團長的決定會使得軍團所有人都加入同一陣營，軍團長可要好好問過團員們的意見喔！軍團加入後即會在軍團介面上顯示該陣營的紋章。</div>
+			<img src="images/page2/a/01.jpg" alt="" class="">
+			<h2>陣營轉換</h2>
+			<div>在軍團內的玩家無法自行轉換陣營。玩家可至主城找NPC轉換陣營，轉換後24小時內不可再進行轉換。轉換後的陣營積分將會被清空。而軍團陣營轉換則會有24小時的等待時間，期間軍團長可隨時終止轉換，成功轉換後會有7天的時間無法進行轉換。</div>
+			<img src="images/page2/a/02.jpg" alt="" class="img-w6">
+		</div>
+	</div>
+
+	<div class="pages-content page2-b" data-num="b">
+		<img src="images/page2-b-ev.png" alt="">
+		<div class="page-text">
+			<div>玩家除了加入陣營外，每日在指定的活動時間內還可以參與資源爭奪戰</div>
+			<div>活動時間:每日18:30-20:00</div>
+			<div>參與人員:已有參加陣營的玩家</div>
+			<div>活動等級限制:大於等於40級</div>
+			<h2>活動規則</h2>
+			<div>1.玩家在活動時間內，可至活動地圖內找對應的陣營指揮官接取陣營任務。陣營任務為收集陣營物資20份，每天可完成3次。</div>
+			<img src="images/page2/b/01.jpg" alt="" class="">
+			<div>2.玩家需到敵方陣營前採取相關物資，採取後會放在背包內。</div>
+			<img src="images/page2/b/02.jpg" alt="" class="img-w6">
+			<div>3.擊殺敵對陣營可玩家會掉落一定比例的物資。</div>
+			<div>4.掉落在地上的物資，任意玩家皆可拾取。</div>
+			<div>5.每個玩家最多可攜帶60份物資，滿了之後無法採集，需丟棄或交回給陣營指揮官才可繼續採集。</div>
+			<div>6.在場景內的玩家，每10分鐘可獲得一次天降物資。</div>
+			<div>7.活動期間地圖中央將會刷新陣營BOSS，第一個攻擊BOSS的玩家若未死亡、脫離戰鬥，則最後擊殺BOSS的獎勵會由第一個攻擊BOSS的該陣營所有玩家共同獲得。(獎勵為該陣營玩家各獲得60虛空幣)</div>
+			<img src="images/page2/b/03.jpg" alt="" class="img-w6">
+			<div>8.每完成一次活動任務，可獲得20虛空幣，虛空幣可至背包介面的虛空幣商店兌換七曜石合成圖。</div>
+		</div>
+	</div>
+
+	<div class="pages-content page2-c" data-num="c">
+		<img src="images/page2-c-ev.png" alt="">
+		<div class="page-text">
+			<div>本次改版首度新增了虛空幣商店，玩家在陣營資源戰所獲得的虛空幣，將可至該商店進行兌換，玩家打開背包選擇「貨幣商店」內的「虛空幣商店」即可打開商店，是不是很方便呢?虛空幣商店內可兌換的是86級的七曜石裝備喔！各位玩家快來收集吧！</div>
+			<img src="images/page2/c/01.jpg" alt="">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+<div class="pages page4" data-page="4">
+	<div class="close-btn" @click="closeBtn"></div>
+	<div class="title">
+		<img src="images/page4-title.png" alt="">
+	</div>
+	<ul class="labels" data-num="4">
+		<li v-for="v in page4labels" class="label-btn" :class="[v.active?'active':'']" @click="labelToggle">{{v.label}}</li>
+	</ul>
+	<div class="pages-content page4-a active" data-num="a">
+		<img src="images/page4-a-ev.png" alt="">
+		<table class="tables" style="margin:18px 60px;width:400px">
+			<thead>
+				<tr>
+					<th v-for="v in page4.page4_a[0].title">{{v.title}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="v in page4.page4_a[0].bounce">
+					<td>{{v.date}}</td>
+					<td>{{v.bouncename}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="notices-box">
+			<p>注意事項</p>
+			<ol>
+				<li class="notice-list" v-for=" v in page4.page4_a[0].notices">{{v.notice}}</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="pages-content page4-b" data-num="b">
+		<img src="images/page4-b-ev.png" alt="">
+		<table class="tables" style="margin:18px 60px;width:400px">
+			<thead>
+				<tr>
+					<th v-for="v in page4.page4_b[0].title">{{v.title}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="v in page4.page4_b[0].bounce">
+					<td>{{v.date}}</td>
+					<td>{{v.bouncename}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="notices-box">
+			<p>注意事項</p>
+			<ol>
+				<li class="notice-list" v-for=" v in page4.page4_b[0].notices">{{v.notice}}</li>
+			</ol>
+		</div>
+	</div>
+</div>

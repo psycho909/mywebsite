@@ -1,0 +1,72 @@
+define(["vue","json/page2_json","json/page3_json","json/page4_json","text!./page2template.html","text!./page3template.html","text!./page4template.html"],
+	function(Vue,page2_json,page3_json,page4_json,page2template,page3template,page4template){
+	var page2labels=[
+        {active:1,label:'陣營系統'},
+        {active:0,label:'陣營資源戰'},
+        {active:0,label:'虛空幣商店'}
+    ]
+    var page3labels=[
+        {active:0,label:'州侯的戰敗'},
+        {active:0,label:'強化返星屑'},
+        {active:0,label:'強化祈福活動'},
+        {active:0,label:'10元好禮大方送'}
+    ]
+    var page4labels=[
+        {active:1,label:'天天登入送'},
+        {active:0,label:'周末點點名'}
+    ]
+    var common={
+	    	methods:{
+				closeBtn:function(){
+	                $('.pages').stop().animate({
+	                    top:'100%'
+	                },800,'easeInOutBack',function(){
+	                    $('.page-group').removeClass('active');
+	                    $('.pages').find('.pages-content').removeClass('active');
+	                    $('.pages').each(function(i,v){
+	                        $('.pages').eq(i).find(".label-btn").eq(0).addClass('active').siblings().removeClass('active');
+	                    })
+	                })
+	                console.log(1)
+	            },
+				labelToggle:function(e){
+	                var _index=$(e.target).index();
+	                var pageNum=$(e.target).parent().parent().data('page');
+	                $(e.target).addClass('active').siblings().removeClass('active');
+	                $('.page'+pageNum).find('.pages-content').eq(_index).addClass('active').siblings().removeClass('active');
+	            }
+			}
+	    }
+	return{
+		page2template:{
+			template:page2template,
+			data:function(){
+				return{
+					page2labels:page2labels,
+					page2:page2_json.page2
+				}
+			},
+			mixins:[common]
+		},
+		page3template:{
+			template:page3template,
+			data:function(){
+				return{
+					page3labels:page3labels,
+					page3:page3_json.page3
+				}
+			},
+			mixins:[common]
+		},
+		page4template:{
+			template:page4template,
+			data:function(){
+				return{
+					page4labels:page4labels,
+					page4:page4_json.page4
+				}
+			},
+			mixins:[common]
+		}
+	}
+})

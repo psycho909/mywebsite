@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="《狂魔Online》霸權爭霸 為信仰而戰">
+	<title>《狂魔Online》</title>
+	<link rel="image_src" href="images/940x386.jpg" type="image/jpeg">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+</head>
+<body>
+	<div id="app" class="wrap bg">
+		<div class="wrap-inner">
+			<!-- 上方MENU -->
+
+			<!-- LOGO -->
+			<a href="http://cd.wasabii.com.tw/index.aspx" class="logo" target="_blank">
+				<img src="images/logo.png" alt="">
+			</a>
+			<!-- Title -->
+			<!-- Menu -->
+			<div class="menu-group">
+				<a href="javascript:;" v-on:click="toggleBtn"></a>
+				<a href="javascript:;" v-on:click="toggleBtn"></a>
+				<a href="javascript:;" v-on:click="toggleBtn"></a>
+			</div>
+			<!-- 大按鈕 -->
+			<div class="btn-group">
+				<a data-fancybox href="https://www.youtube.com/watch?v=WhBGvXYC0Ho&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" class="big-btn video-btn">
+					<img src="images/video-btn.png" alt="">
+				</a>
+				<a href="http://dl.cayennetech.com.tw/CD/CD_Downloader_20170630.exe" class="big-btn trigger-btn download-btn" target="_blank">
+					<img src="images/download-btn.png" alt="">
+				</a>
+				<a href="https://member.wasabii.com.tw/WA_memberCenter/joinMember/simpleMember_a.aspx" class="big-btn trigger-btn memeber-btn" target="_blank">
+					<img src="images/member-btn.png" alt="">
+				</a>
+				<a href="https://forum.gamer.com.tw/A.php?bsn=32059" target="_blank" class="big-btn trigger-btn baha-btn">
+					<img src="images/baha.png" alt="">
+				</a>
+				<a href="https://www.facebook.com/CDTWONLINE/?fref=ts" target="_blank" class="big-btn trigger-btn fb-btn">
+					<img src="images/fb.png" alt="">
+				</a>
+			</div>
+			<div class="page-group">
+				<!-- page2 -->
+				<page2template></page2template>
+				<page3template></page3template>
+				<page4template></page4template>
+
+			</div>
+		</div>
+	</div>
+	<script src="js/lib/require.js" data-main="js/main" defer async="true"></script>
+
+</body>
+</html>
