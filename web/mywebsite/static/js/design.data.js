@@ -1,4 +1,5 @@
 [
+	{"img":"./static/images/design/2017/oct/171101_cd/171101_cd.jpg"},
 	{"img":"./static/images/design/2017/step/171005_bb/white-01.jpg"},
 	{"img":"./static/images/design/2017/step/170930_sw/fb.jpg"},
 	{"img":"./static/images/design/2017/step/170929_eloa/01.jpg"},
