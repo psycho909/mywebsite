@@ -1,4 +1,9 @@
 [
+	{"img":"./static/images/design/2017/nove/171108_SW/xxx.jpg"},
+	{"img":"./static/images/design/2017/nove/171110_DM/01.jpg"},
+	{"img":"./static/images/design/2017/nove/171110_DM/02.jpg"},
+	{"img":"./static/images/design/2017/nove/171110_DM/03.jpg"},
+	{"img":"./static/images/design/2017/nove/171110_DM/04.jpg"},
 	{"img":"./static/images/design/2017/oct/171101_cd/171101_cd.jpg"},
 	{"img":"./static/images/design/2017/step/171005_bb/white-01.jpg"},
 	{"img":"./static/images/design/2017/step/170930_sw/fb.jpg"},
